@@ -15,10 +15,10 @@ after_success:
  - docker build -t karthikganduri07/multi-worker ./worker
  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
  #Push images to docker hub
- - docker push karthikganduri07/multi-client
  - docker push karthikganduri07/multi-nginx
  - docker push karthikganduri07/multi-server
  - docker push karthikganduri07/multi-worker
+ - docker push karthikganduri07/multi-client
 
 deploy:
   provider: elasticbeanstalk
